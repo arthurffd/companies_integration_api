@@ -2,7 +2,7 @@
 This is the Data Integration Challenge project<br />
 
 ## Purpose: 
-  this document contains necessary information to run the application and explain the purposes and expecet results.<br />
+  this document contains necessary information to run the application and explain the purposes and expected results.<br />
 <br />
 Customer: Neoway <br />
 Developer: Arthur Flores Duarte <br />
@@ -12,7 +12,7 @@ Last Updates:  <br />
 <br />
 <br />
 ## Project Files:
-  ####  appfull.py - Main application source code in Python
+  ###  appfull.py - Main application source code in Python
 - Setup: 
   - Loads companies data from file (q1_catalog.csv) to a dataframe;
   - Prepares and transform data;<br />
@@ -21,7 +21,7 @@ Last Updates:  <br />
 - API:
   - Setup API using FLASK framework package;
   - Class Company (Resource);
-    - Methods;
+    - Methods:
       - get : HTTP GET method - search a company by name and zip code.
         - Input: <br />
               HTTP Request - GET - http://127.0.0.1:5000/company<br />
@@ -30,20 +30,15 @@ Last Updates:  <br />
               <br />
         - Results: <br />
               200: in case of the company was found, return HTTP code "200" and also the company information;<br />
-              404: if didn't find any company related, return HTTP code "404 and the message "company not found";<br />
-<br />
-<br />                          
+              404: if didn't find any company related, return HTTP code "404 and the message "company not found"; <br /><br />
       - put: PUT HTTP method - update a company website information.
         - Input: <br />
             HTTP Request - PUT - http://127.0.0.1:5000/company <br />
             Name, ZipCode and Website should be informed in JSON content, example: <br />
-            {"company_name": "tim dieball", "zip_code": "53115", "website": "http://motorsport-coatings.com" } <br />
-<br />
+            {"company_name": "tim dieball", "zip_code": "53115", "website": "http://motorsport-coatings.com" } <br /><br />
         - Results: <br />
             200: in case of the company was found, update the company website attribute. Then return HTTP code "200" and also the updated company information;<br />
-            404: if didn't find any company related, return HTTP code "404 and the message "company not found"; <br />
-<br />
-<br />
-  - Run API interface
-    - URL: http://127.0.0.1:5000/company
+            404: if didn't find any company related, return HTTP code "404 and the message "company not found"; <br /><br />
+  - Finally the code run the API interface to be available:<br />
+          URL: http://127.0.0.1:5000/company
 <br />
