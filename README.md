@@ -12,7 +12,7 @@ Last Updates:  <br />
 <br />
 <br />
 ## Project Files:
-  ###  appfull.py - Main application source code in Python
+  ###  appfull.py - Main application: load data and starts API
 - Setup: 
   - Loads companies data from file (q1_catalog.csv) to a dataframe;
   - Prepares and transform data;<br />
@@ -40,5 +40,24 @@ Last Updates:  <br />
             200: in case of the company was found, update the company website attribute. Then return HTTP code "200" and also the updated company information;<br />
             404: if didn't find any company related, return HTTP code "404 and the message "company not found"; <br /><br />
   - Finally the code run the API interface to be available:<br />
-          URL: http://127.0.0.1:5000/company
-<br />
+          URL: http://127.0.0.1:5000/company <br /> <br />
+### client_test.py - test client application, calls api functions 
+- Setup: 
+  - Loads companies data from file (q2_clientData.csv) containing website information;
+  - Prepares and transform data;<br />
+
+- API Test:
+  - Update companies website calling the API:
+    - Iterates over dataframe with companies names, zipcodes and websites ;
+    - For each company tries to update data, calling HTTP Request PUT method over url http://127.0.0.1:5000/company ;
+    - In each HTTP Request PUT, send a JSON content containing company_name, zipcode and website ; 
+  
+  - Requests companies information calling the API:
+      - Iterates over dataframe with companies;
+      - Call API using HTTP GET request sending JSON content with company_name and zip_code;
+      - Prints received information from companies; <br />
+
+
+
+
+
