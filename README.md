@@ -9,8 +9,18 @@ Developer: Arthur Flores Duarte <br />
 <br />
 Created Date: 2018/10/22 <br />
 Last Updates:  <br />
-<br />
-<br />
+<br /><br />
+
+## How to run the application:
+  1. First of all, files "appfull.py" and "q1_catalog.csv" should be in the same directory.<br />
+  
+  2. Execute the python script "appfull.py" to load companies file and start the API ("python appfull.py"); <br />
+  
+  3. Use the URL http://*[app_host]*:*[app_port]*/company to call the API, and use GET or PUT methods sending JSON contents. Example http://127.0.0.1:5000/company - GET - JSON Content: {"company_name": "pizza hut" , "zip_code": "44667"} <br />
+  
+  4. If you want, you can test the API by running the test client script "client_test.py" to update and get companies using the API ("python client_test.py"). Files "q2_clientData.csv" and "client_test.py" should be in the same directory;
+<br /><br />
+
 ## Project Files:
   ###  appfull.py - Main application: load data and starts API
 - Setup: 
