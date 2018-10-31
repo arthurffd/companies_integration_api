@@ -24,7 +24,7 @@ Last Updates:  <br />
 ## Project Files:
   ###  appfull.py - Main application: load data and starts API
 - Setup: 
-  - Loads companies data from file (q1_catalog.csv) to a dataframe;
+  - Loads companies data from the initial file (q1_catalog.csv) or persisted file (companies_v001.pkl) to a dataframe;
   - Prepares and transform data;<br />
   - Creates an instance from entity Companies;
 
@@ -47,10 +47,11 @@ Last Updates:  <br />
             Name, ZipCode and Website should be informed in JSON content, example: <br />
             {"company_name": "tim dieball", "zip_code": "53115", "website": "http://motorsport-coatings.com" } <br /><br />
         - Results: <br />
-            200: in case of the company was found, update the company website attribute. Then return HTTP code "200" and also the updated company information;<br />
+            200: in case of the company was found, update the company website attribute and persist companies data in a pickle file (companies_v001.pkl). Then return HTTP code "200" and also retrieve the updated company information;<br />
             404: if didn't find any company related, return HTTP code "404 and the message "company not found"; <br /><br />
   - Finally the code run the API interface to be available:<br />
           URL: http://127.0.0.1:5000/company <br /> <br />
+          
 ### client_test.py - test client application, calls api functions 
 - Setup: 
   - Loads companies data from file (q2_clientData.csv) containing website information;
@@ -66,6 +67,14 @@ Last Updates:  <br />
       - Iterates over dataframe with companies;
       - Call API using HTTP GET request sending JSON content with company_name and zip_code;
       - Prints received information from companies; <br />
+<br /> <br />
+### Testing API with HTTP Clients - Imnsonia
+- GET Method: Retrieve company by name and zipcode <br />
+  ![Imnsonia Test GET company](Imnsonia_GET_Test.png?raw=true "GET")
+<br/> <br />
+- PUT Method: Update company website information
+  ![Imnsonia Test PUT company](Imnsonia_PUT_Test.png?raw=true "GET")
+<br />
 
 
 
