@@ -1,7 +1,8 @@
 # Data Integration Challenge
 This is the Data Integration Challenge project<br />
 
-Purpose: this document contains necessary information to run the application and explain the purposes and expecet results.<br />
+## Purpose: 
+  this document contains necessary information to run the application and explain the purposes and expecet results.<br />
 <br />
 Customer: Neoway <br />
 Developer: Arthur Flores Duarte <br />
@@ -10,13 +11,12 @@ Created Date: 2018/10/22 <br />
 Last Updates:  <br />
 <br />
 <br />
-Project Files: <br />
-    Source codes:<br />
-        appfull.py - Main application:<br />
-            Setup:<br />
-                * Loads companies data from file (q1_catalog.csv) to a dataframe;<br />
-                * Prepares and transform data;<br />
-                * Creates an instance from entity Companies;<br />
+## Project Files:
+  ####  appfull.py - Main application source code in Python
+  Setup:<br />
+    * Loads companies data from file (q1_catalog.csv) to a dataframe;<br />
+    * Prepares and transform data;<br />
+    * Creates an instance from entity Companies;<br />
               <br />
             API:<br />
                 Setup API using FLASK framework package;<br />
