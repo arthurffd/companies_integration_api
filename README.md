@@ -4,7 +4,7 @@ This is the Data Integration Challenge project<br />
 ## Purpose: 
   this document contains necessary information to run the application and explain the purposes and expected results.<br />
 <br />
-Customer: Neoway <br />
+Customer: NW <br />
 Developer: Arthur Flores Duarte <br />
 <br />
 Created Date: 2018/10/22 <br />
